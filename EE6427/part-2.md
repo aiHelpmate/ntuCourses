@@ -30,7 +30,7 @@ $$
 
 每个待编码的符号最终对应于树中的一个叶节点，其唯一可译的码字由从根节点出发、沿分支路径抵达该叶节点所经过的二进制序列依次串联而成。这种树形结构不仅保证了所生成的码字具备前缀性（即即时码），使得解码端无需依赖额外分隔符即可无歧义地逐符号还原原始序列，同时其构建过程中的概率合并策略也确保了该编码在给定符号概率分布下具有最优的前缀码效率。
 
-![](assets/imgs/Huffman-Coding.png)
+![](assets/imgs/part2/Huffman-Coding.png)
 
 ```text
 每次选取概率最小的两个节点合并
@@ -106,7 +106,7 @@ $$
 
 > :bulb: 变换环节中，**离散余弦变换（Discrete Cosine Transform，DCT）** 因其接近最优的克拉美-罗下界（Karhunen-Loève Transform，KLT）的去相关能力以及基于快速算法的低计算复杂度，成为 JPEG、MPEG 及 H.26x 系列标准的实际选择。此外，离散傅里叶变换（DFT）与离散小波变换（DWT）也在特定应用场景中各自发挥优势
 
-![](assets/imgs/Transform-based-Image-Compression.png)
+![](assets/imgs/part2/Transform-based-Image-Compression.png)
 
 量化是系统中唯一引入不可逆信息损失的环节，其实质为一种**多对一映射（Many-to-One Mapping）**。
 
@@ -156,7 +156,7 @@ DCT 在压缩中的优势在于 **能量集中（Energy Compaction）** 特性�
 
 ### A. 例题 1
 
-![](assets/imgs/Exercise-2D-DCT-01.png)
+![](assets/imgs/part2/Exercise-2D-DCT-01.png)
 
 对于 $N \times N$ 的图像块（此处 $N=4$），二维 DCT 定义为：
 
@@ -254,7 +254,7 @@ S_A = \begin{bmatrix}
 }
 $$
 
-![](assets/imgs/Exercise-2D-DCT-02.png)
+![](assets/imgs/part2/Exercise-2D-DCT-02.png)
 
 观察到 B 可表示为全 1 矩阵 $J$ 与块 A 的线性组合：
 
@@ -314,7 +314,7 @@ $$
 
 ### B. 例题 2
 
-![](assets/imgs/Exercise-2D-DCT-Using-Matrix-Implementation.png)
+![](assets/imgs/part2/Exercise-2D-DCT-Using-Matrix-Implementation.png)
 
 
 ## VI. JPEG Standard
@@ -350,7 +350,7 @@ JPEG 标准推荐了两套经典的量化表（一套针对亮度分量，一套
 
 ### A. 例题 1
 
-![](assets/imgs/Exercise-Basis-Function-and-Quantization.png)
+![](assets/imgs/part2/Exercise-Basis-Function-and-Quantization.png)
 
 ## VII. New & Emerging Directions
 
